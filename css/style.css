@@ -321,10 +321,6 @@ nav a:hover {
     }
 }
 
-/* ========================================
-   EDUCACIÓN & CERTIFICACIONES
-   ======================================== */
-
 .education-grid {
     display: grid;
     gap: 2rem;
@@ -337,6 +333,7 @@ nav a:hover {
     border-radius: 14px;
     overflow: hidden;
     transition: 0.3s;
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     display: grid;
     grid-template-columns: 1fr 300px;
@@ -431,10 +428,6 @@ nav a:hover {
     padding: 1rem;
     border: 2px dashed #00fff230;
 }
-
-/* ========================================
-   RESPONSIVE - EDUCACIÓN
-   ======================================== */
 
 @media (max-width: 968px) {
     .education-card {
