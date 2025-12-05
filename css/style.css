@@ -30,7 +30,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap; /* evita quiebre en pantallas pequeñas */
+    flex-wrap: wrap;
 }
 
 .logo {
@@ -164,7 +164,6 @@ nav a:hover {
     box-shadow: 0 0 20px #00fff270;
 }
 
-/* --- Projects (mantuve TODO lo tuyo) --- */
 .projects-grid {
     max-width: 1200px;
     margin: 2rem auto;
@@ -224,7 +223,6 @@ nav a:hover {
     font-size: 0.85rem;
 }
 
-/* --- Social (mantuve todo) --- */
 .social-links {
     display: flex;
     gap: 1rem;
@@ -291,7 +289,6 @@ nav a:hover {
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
 }
 
-/* --- Education (mantuve TODO lo tuyo) --- */
 .education-grid {
     display: grid;
     gap: 2rem;
@@ -375,11 +372,13 @@ nav a:hover {
 
 .card-image img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
+    object-fit: contain;
     border-radius: 8px;
     transition: 0.3s;
+    max-height: 350px;
 }
+
 
 .card-image:hover img {
     transform: scale(1.05);
@@ -409,12 +408,6 @@ footer {
     border-top: 1px solid #00ffcc60;
     margin-top: 3rem;
 }
-
-/* ================================
-   MEDIA QUERIES (responsive tweaks)
-   No se eliminó ninguna propiedad previa,
-   solo se añaden reglas para adaptar.
-================================ */
 
 @media (max-width: 1200px) {
     .profile-card { margin: 50px 20px; }
@@ -462,7 +455,6 @@ footer {
     .skills-grid { grid-template-columns: 1fr; }
 }
 
-/* support ultra-wide & 4k */
 @media (min-width: 1600px) {
     .container, .profile-card, .projects-grid, .skills-grid { max-width: 1500px; }
 }
