@@ -30,11 +30,12 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap; /* evita quiebre en pantallas pequeñas */
 }
 
 .logo {
     color: #00fff2;
-    font-size: 1.9rem;
+    font-size: clamp(1.4rem, 4vw, 1.9rem);
     font-weight: 700;
     letter-spacing: 2px;
     text-shadow: 0 0 15px #00fff2;
@@ -46,6 +47,7 @@ nav a {
     text-decoration: none;
     font-weight: 500;
     transition: 0.3s;
+    font-size: clamp(0.9rem, 2vw, 1rem);
 }
 
 nav a:hover {
@@ -62,7 +64,7 @@ nav a:hover {
 .profile-card {
     max-width: 1100px;
     margin: 60px auto;
-    padding: 40px;
+    padding: clamp(20px, 4vw, 40px);
     border-radius: 18px;
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(0, 255, 242, 0.15);
@@ -79,10 +81,11 @@ nav a:hover {
     margin-bottom: 30px;
     padding-bottom: 30px;
     border-bottom: 1px solid rgba(0, 255, 242, 0.15);
+    flex-wrap: wrap;
 }
 
 .profile-info h1 {
-    font-size: 2.2rem;
+    font-size: clamp(1.7rem, 4vw, 2.2rem);
     font-weight: 700;
     color: #ffffff;
     text-shadow: 0 0 12px #00fff2;
@@ -91,7 +94,7 @@ nav a:hover {
 }
 
 .profile-info .subtitle {
-    font-size: 1.1rem;
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
     color: #00fff2;
     text-shadow: 0 0 8px #00fff2;
 }
@@ -101,8 +104,8 @@ nav a:hover {
 }
 
 .profile-image img {
-    width: 200px;
-    height: 200px;
+    width: clamp(140px, 30vw, 200px);
+    height: clamp(140px, 30vw, 200px);
     border-radius: 15px;
     object-fit: cover;
     border: 2px solid rgba(0, 255, 242, 0.3);
@@ -111,7 +114,7 @@ nav a:hover {
 
 .section-title {
     text-align: center;
-    font-size: 2.8rem;
+    font-size: clamp(2rem, 6vw, 2.8rem);
     color: #00fff2;
     margin: 3rem 0 2rem;
     text-shadow: 0 0 15px #00fff2;
@@ -120,13 +123,13 @@ nav a:hover {
 .about-content {
     background: rgba(10, 10, 28, 0.5);
     border: 1px solid #00ffcc40;
-    padding: 2rem;
+    padding: clamp(1.2rem, 3vw, 2rem);
     border-radius: 15px;
     -webkit-backdrop-filter: blur(12px);
     backdrop-filter: blur(12px);
     max-width: 900px;
     margin: auto;
-    font-size: 1.1rem;
+    font-size: clamp(1rem, 2.2vw, 1.1rem);
     color: #d0eaff;
 }
 
@@ -134,7 +137,7 @@ nav a:hover {
     max-width: 1200px;
     margin: 2rem auto;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 2rem;
 }
 
@@ -161,6 +164,7 @@ nav a:hover {
     box-shadow: 0 0 20px #00fff270;
 }
 
+/* --- Projects (mantuve TODO lo tuyo) --- */
 .projects-grid {
     max-width: 1200px;
     margin: 2rem auto;
@@ -220,6 +224,7 @@ nav a:hover {
     font-size: 0.85rem;
 }
 
+/* --- Social (mantuve todo) --- */
 .social-links {
     display: flex;
     gap: 1rem;
@@ -286,6 +291,7 @@ nav a:hover {
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
 }
 
+/* --- Education (mantuve TODO lo tuyo) --- */
 .education-grid {
     display: grid;
     gap: 2rem;
@@ -404,71 +410,60 @@ footer {
     margin-top: 3rem;
 }
 
-@media (max-width: 968px) {
-    .education-card {
-        grid-template-columns: 1fr;
-    }
+/* ================================
+   MEDIA QUERIES (responsive tweaks)
+   No se eliminó ninguna propiedad previa,
+   solo se añaden reglas para adaptar.
+================================ */
 
+@media (max-width: 1200px) {
+    .profile-card { margin: 50px 20px; }
+    .projects-grid { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+    .skills-grid { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+}
+
+@media (max-width: 992px) {
+    .education-card {
+        grid-template-columns: 1fr; /* mantiene diseño pero apila en móvil */
+    }
     .card-image {
         border-left: none;
         border-top: 1px solid #00ffcc30;
         min-height: 250px;
     }
+    .profile-header { flex-direction: column; text-align: center; }
 }
 
 @media (max-width: 768px) {
-    .social-links {
-        gap: 0.8rem;
-    }
-    
-    .social-btn {
-        width: 45px;
-        height: 45px;
-        font-size: 1.3rem;
-    }
-
-    .profile-card {
-        padding: 25px;
-        margin: 30px 20px;
-    }
-
-    .profile-header {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .profile-info h1 {
-        font-size: 1.8rem;
-    }
-
-    .info-row {
-        grid-template-columns: 1fr;
-        gap: 10px;
-    }
-
-    .info-label {
-        justify-content: center;
-    }
-
-    .info-value {
-        justify-content: center;
-    }
-
-    .values-grid {
-        grid-template-columns: 1fr;
-    }
+    .social-links { gap: 0.8rem; }
+    .social-btn { width: 45px; height: 45px; font-size: 1.3rem; }
+    .profile-card { padding: 25px; margin: 30px 20px; }
+    .profile-info h1 { font-size: 1.8rem; }
+    .info-row { grid-template-columns: 1fr; gap: 10px; }
+    .info-label { justify-content: center; }
+    .info-value { justify-content: center; }
+    .values-grid { grid-template-columns: 1fr; }
+    .projects-grid { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
 }
 
 @media (max-width: 568px) {
-    .card-title {
-        font-size: 1.3rem;
-    }
-
-    .card-institution {
-        font-size: 1rem;
-    }
-
-    .card-content {
-        padding: 1.5rem;
-    }
+    .card-title { font-size: 1.3rem; }
+    .card-institution { font-size: 1rem; }
+    .card-content { padding: 1.5rem; }
+    .project-header { font-size: 1.6rem; padding: 1rem; }
+    .project-content { padding: 1rem; }
+    .profile-image img { width: 140px; height: 140px; }
 }
+
+@media (max-width: 480px) {
+    .profile-card { padding: 20px; margin: 18px; }
+    .about-content { padding: 1rem; }
+    .projects-grid { grid-template-columns: 1fr; }
+    .skills-grid { grid-template-columns: 1fr; }
+}
+
+/* support ultra-wide & 4k */
+@media (min-width: 1600px) {
+    .container, .profile-card, .projects-grid, .skills-grid { max-width: 1500px; }
+}
+
