@@ -52,73 +52,61 @@ nav a:hover {
     color: #00fff2;
     text-shadow: 0 0 10px #00fff2;
 }
+
 .container {
     max-width: 1200px;
     margin: auto;
     padding: 2rem;
 }
 
-#inicio {
+.profile-card {
     max-width: 1100px;
     margin: 60px auto;
     padding: 40px;
     border-radius: 18px;
-
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(0, 255, 242, 0.15);
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
+    box-shadow: 0 0 25px rgba(0, 255, 242, 0.08);
+}
 
+.profile-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 40px;
-
-    box-shadow: 0 0 25px rgba(0, 255, 242, 0.08);
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgba(0, 255, 242, 0.15);
 }
 
-#inicio .hero-content {
-    flex: 1;
-}
-
-#inicio h1 {
-    font-size: 2.6rem;
+.profile-info h1 {
+    font-size: 2.2rem;
     font-weight: 700;
-    margin-bottom: 12px;
     color: #ffffff;
     text-shadow: 0 0 12px #00fff2;
-}
-
-#inicio p {
-    font-size: 1.1rem;
-    color: #cccccc;
     margin-bottom: 10px;
+    letter-spacing: 1px;
 }
 
-#inicio .skills,
-#inicio .soft-skills {
-    margin-top: 18px;
+.profile-info .subtitle {
+    font-size: 1.1rem;
+    color: #00fff2;
+    text-shadow: 0 0 8px #00fff2;
 }
 
-#inicio .skills span,
-#inicio .soft-skills span {
-    display: block;
-    margin-bottom: 6px;
-    font-size: 1.05rem;
+.profile-image {
+    flex-shrink: 0;
 }
 
-#inicio .emoji {
-    margin-right: 6px;
-    font-size: 1.2rem;
-}
-
-#inicio .hero-image img {
-    width: 100%;
-    height: 150%;
-    object-fit: cover;
-    border: 1px solid #00ffcc40;
+.profile-image img {
+    width: 200px;
+    height: 200px;
     border-radius: 15px;
-    display: block;
+    object-fit: cover;
+    border: 2px solid rgba(0, 255, 242, 0.3);
+    box-shadow: 0 0 20px rgba(0, 255, 242, 0.2);
 }
 
 .section-title {
@@ -127,7 +115,6 @@ nav a:hover {
     color: #00fff2;
     margin: 3rem 0 2rem;
     text-shadow: 0 0 15px #00fff2;
-    
 }
 
 .about-content {
@@ -147,7 +134,7 @@ nav a:hover {
     max-width: 1200px;
     margin: 2rem auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
 }
 
@@ -274,6 +261,7 @@ nav a:hover {
     transform: scale(1.1);
     text-shadow: 0 0 10px #00fff2;
 }
+
 .social-btn.email:hover {
     border-color: #D44638;
     color: #D44638;
@@ -296,29 +284,6 @@ nav a:hover {
     border-color: #fff;
     color: #fff;
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
-}
-
-.nav-social {
-    display: flex;
-    gap: 0.8rem;
-}
-
-.nav-social .social-btn {
-    width: 40px;
-    height: 40px;
-    font-size: 1.2rem;
-}
-
-@media (max-width: 768px) {
-    .social-links {
-        gap: 0.8rem;
-    }
-    
-    .social-btn {
-        width: 45px;
-        height: 45px;
-        font-size: 1.3rem;
-    }
 }
 
 .education-grid {
@@ -429,6 +394,16 @@ nav a:hover {
     border: 2px dashed #00fff230;
 }
 
+footer {
+    text-align: center;
+    padding: 1.5rem 0;
+    background: rgba(10, 10, 30, 0.6);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid #00ffcc60;
+    margin-top: 3rem;
+}
+
 @media (max-width: 968px) {
     .education-card {
         grid-template-columns: 1fr;
@@ -438,6 +413,49 @@ nav a:hover {
         border-left: none;
         border-top: 1px solid #00ffcc30;
         min-height: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    .social-links {
+        gap: 0.8rem;
+    }
+    
+    .social-btn {
+        width: 45px;
+        height: 45px;
+        font-size: 1.3rem;
+    }
+
+    .profile-card {
+        padding: 25px;
+        margin: 30px 20px;
+    }
+
+    .profile-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-info h1 {
+        font-size: 1.8rem;
+    }
+
+    .info-row {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .info-label {
+        justify-content: center;
+    }
+
+    .info-value {
+        justify-content: center;
+    }
+
+    .values-grid {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -453,14 +471,4 @@ nav a:hover {
     .card-content {
         padding: 1.5rem;
     }
-}
-
-footer {
-    text-align: center;
-    padding: 1.5rem 0;
-    background: rgba(10, 10, 30, 0.6);
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-    border-top: 1px solid #00ffcc60;
-    margin-top: 3rem;
 }
