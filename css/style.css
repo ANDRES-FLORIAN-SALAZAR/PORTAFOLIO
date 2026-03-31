@@ -190,10 +190,12 @@ nav a:hover {
 }
 
 .project-header img {
-    max-width: 80%;
-    height: auto;
-    object-fit: contain;
-    border-radius: 8px;
+    max-width: 70% !important;
+    height: 120px !important;
+    object-fit: contain !important;
+    border-radius: 8px !important;
+    margin: 0 auto !important;
+    display: block !important;
 }
 
 .project-header {
