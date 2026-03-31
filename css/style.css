@@ -167,9 +167,10 @@ nav a:hover {
 .projects-grid {
     max-width: 1400px;
     margin: 2rem auto;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
     gap: 1.5rem;
+    border: 2px solid red;
 }
 
 .project-card {
