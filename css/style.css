@@ -189,9 +189,16 @@ nav a:hover {
     box-shadow: 0 0 20px #00fff280;
 }
 
+.project-header img {
+    max-width: 80%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
 .project-header {
     background: linear-gradient(135deg, #001a1a, #003333);
-    padding: 1.8rem;
+    padding: 1rem;
     text-align: center;
     color: #00fff2;
     font-size: 2.4rem;
