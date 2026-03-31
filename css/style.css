@@ -168,8 +168,8 @@ nav a:hover {
     max-width: 1400px;
     margin: 2rem auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
 }
 
 .project-card {
@@ -411,7 +411,7 @@ footer {
 
 @media (max-width: 1200px) {
     .profile-card { margin: 50px 20px; }
-    .projects-grid { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+    .projects-grid { grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
     .skills-grid { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
 }
 
@@ -436,7 +436,7 @@ footer {
     .info-label { justify-content: center; }
     .info-value { justify-content: center; }
     .values-grid { grid-template-columns: 1fr; }
-    .projects-grid { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+    .projects-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
 }
 
 @media (max-width: 568px) {
@@ -451,12 +451,12 @@ footer {
 @media (max-width: 480px) {
     .profile-card { padding: 20px; margin: 18px; }
     .about-content { padding: 1rem; }
-    .projects-grid { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+    .projects-grid { grid-template-columns: 1fr; gap: 1rem; }
     .skills-grid { grid-template-columns: 1fr; }
 }
 
 @media (min-width: 1600px) {
     .container, .profile-card, .projects-grid, .skills-grid { max-width: 1500px; }
-    .projects-grid { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+    .projects-grid { grid-template-columns: repeat(4, 1fr); gap: 2rem; }
 }
 
