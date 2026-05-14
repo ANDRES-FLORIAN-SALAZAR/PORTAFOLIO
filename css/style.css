@@ -617,15 +617,37 @@ nav a:hover {
 .modern-grid {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto auto;
+    gap: 2rem;
 }
 
 .modern-grid .featured {
-    grid-column: span 2;
-    grid-row: span 2;
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
 }
 
-.modern-grid .skill-category:not(.featured) {
-    grid-column: span 1;
+.modern-grid .skill-category:not(.featured):nth-child(2) {
+    grid-column: 3;
+    grid-row: 1;
+}
+
+.modern-grid .skill-category:not(.featured):nth-child(3) {
+    grid-column: 3;
+    grid-row: 2;
+}
+
+.modern-grid .skill-category:not(.featured):nth-child(4) {
+    grid-column: 1;
+    grid-row: 3;
+}
+
+.modern-grid .skill-category:not(.featured):nth-child(5) {
+    grid-column: 2;
+    grid-row: 3;
+}
+
+.modern-grid .skill-category:not(.featured):nth-child(6) {
+    grid-column: 3;
+    grid-row: 3;
 }
 
 .skill-category {
