@@ -1419,6 +1419,17 @@ footer {
     .metrics-grid { grid-template-columns: 1fr; }
     .project-buttons { flex-direction: column; }
     .project-btn { width: 100%; }
+    
+    nav a {
+        font-size: 1rem;
+        padding: 0.8rem;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 8px;
+    }
+    
+    nav a:hover {
+        background: rgba(102, 126, 234, 0.2);
+    }
 }
 
 @media (max-width: 480px) {
@@ -1433,6 +1444,24 @@ footer {
     .profile-info .subtitle { font-size: 0.9rem; }
     .hero-cta { gap: 0.8rem; }
     .cta-button { padding: 0.6rem 1.2rem; font-size: 0.9rem; }
+    
+    .education-card {
+        grid-template-columns: 1fr;
+    }
+    
+    .card-image {
+        border-left: none;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        min-height: 200px;
+    }
+    
+    .card-content {
+        padding: 1.5rem;
+    }
+    
+    .card-title {
+        font-size: 1.2rem;
+    }
 }
 
 @media (min-width: 1600px) {
