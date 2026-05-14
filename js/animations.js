@@ -30,8 +30,8 @@ ctaButtons.forEach(button => {
     button.classList.add('pulse-glow');
 });
 
-// Add neon text to section titles
-const sectionTitles = document.querySelectorAll('.section-title');
-sectionTitles.forEach(title => {
-    title.classList.add('neon-text');
-});
+// Add neon text to section titles (disabled - causes readability issues)
+// const sectionTitles = document.querySelectorAll('.section-title');
+// sectionTitles.forEach(title => {
+//     title.classList.add('neon-text');
+// });
