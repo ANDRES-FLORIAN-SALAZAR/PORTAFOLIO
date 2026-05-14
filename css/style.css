@@ -664,6 +664,51 @@ nav a:hover {
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
 }
 
+.contact-cta {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.contact-btn {
+    padding: 0.8rem 1.5rem;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    border: 2px solid;
+}
+
+.whatsapp-btn {
+    background: linear-gradient(135deg, rgba(37, 211, 102, 0.2), rgba(37, 211, 102, 0.1));
+    border-color: #25d366;
+    color: #25d366;
+}
+
+.whatsapp-btn:hover {
+    background: rgba(37, 211, 102, 0.4);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 0 25px rgba(37, 211, 102, 0.5);
+}
+
+.email-btn {
+    background: linear-gradient(135deg, rgba(233, 69, 96, 0.2), rgba(233, 69, 96, 0.1));
+    border-color: #e94560;
+    color: #e94560;
+}
+
+.email-btn:hover {
+    background: rgba(233, 69, 96, 0.4);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 0 25px rgba(233, 69, 96, 0.5);
+}
+
 .education-grid {
     display: grid;
     gap: 2rem;
