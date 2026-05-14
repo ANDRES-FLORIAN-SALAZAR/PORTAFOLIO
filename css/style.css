@@ -604,50 +604,6 @@ nav a:hover {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
-    align-items: stretch;
-}
-
-.skills-grid .skill-category {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    min-height: 280px;
-}
-
-.modern-grid {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto auto;
-    gap: 2rem;
-}
-
-.modern-grid .featured {
-    grid-column: 1 / span 2;
-    grid-row: 1 / span 2;
-}
-
-.modern-grid .skill-category:not(.featured):nth-child(2) {
-    grid-column: 3;
-    grid-row: 1;
-}
-
-.modern-grid .skill-category:not(.featured):nth-child(3) {
-    grid-column: 3;
-    grid-row: 2;
-}
-
-.modern-grid .skill-category:not(.featured):nth-child(4) {
-    grid-column: 1;
-    grid-row: 3;
-}
-
-.modern-grid .skill-category:not(.featured):nth-child(5) {
-    grid-column: 2;
-    grid-row: 3;
-}
-
-.modern-grid .skill-category:not(.featured):nth-child(6) {
-    grid-column: 3;
-    grid-row: 3;
 }
 
 .skill-category {
@@ -664,20 +620,6 @@ nav a:hover {
     box-shadow: 
         0 8px 32px rgba(0, 0, 0, 0.3),
         inset 0 1px 0 rgba(255, 255, 255, 0.1);
-}
-
-.skill-category.featured {
-    background: linear-gradient(135deg, rgba(102, 126, 234, 0.15), rgba(118, 75, 162, 0.1));
-    border: 2px solid rgba(102, 126, 234, 0.3);
-    padding: 3.5rem 2.5rem;
-}
-
-.skill-category.featured .skill-icon {
-    font-size: 4rem;
-}
-
-.skill-category.featured h3 {
-    font-size: 1.8rem;
 }
 
 .skill-category::before {
@@ -721,10 +663,9 @@ nav a:hover {
 
 .skill-category h3 {
     margin-bottom: 1.5rem;
-    color: #fff;
-    font-size: 1.4rem;
-    font-weight: 700;
-    letter-spacing: -0.3px;
+    color: #00fff2;
+    font-size: 1.5rem;
+    text-shadow: 0 0 15px #00fff2;
 }
 
 .tech-pills {
@@ -819,14 +760,6 @@ nav a:hover {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
-    align-items: stretch;
-}
-
-.experience-grid .experience-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    min-height: 280px;
 }
 
 .experience-card {
@@ -877,17 +810,16 @@ nav a:hover {
 }
 
 .experience-card h3 {
-    color: #fff;
-    font-size: 1.3rem;
-    font-weight: 700;
+    color: #00fff2;
+    font-size: 1.4rem;
     margin-bottom: 1rem;
-    letter-spacing: -0.3px;
+    text-shadow: 0 0 12px #00fff2;
 }
 
 .experience-card p {
-    color: rgba(255, 255, 255, 0.8);
+    color: #cde7ff;
     font-size: 0.95rem;
-    line-height: 1.7;
+    line-height: 1.6;
 }
 
 .metrics-grid {
@@ -937,13 +869,6 @@ nav a:hover {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
-    align-items: stretch;
-}
-
-.projects-grid .project-card {
-    display: flex;
-    flex-direction: column;
-    min-height: 400px;
 }
 
 .project-card {
@@ -1017,18 +942,17 @@ nav a:hover {
 }
 
 .project-title {
-    color: #fff;
-    font-weight: 700;
+    color: #00fff2;
+    text-shadow: 0 0 12px #00fff2;
     margin-bottom: 0.8rem;
-    font-size: 1.3rem;
-    letter-spacing: -0.3px;
+    font-size: 1.4rem;
 }
 
 .project-description {
-    color: rgba(255, 255, 255, 0.8);
+    color: #cde7ff;
     margin-bottom: 1rem;
     font-size: 0.95rem;
-    line-height: 1.7;
+    line-height: 1.6;
 }
 
 .tech-tags {
@@ -1344,8 +1268,6 @@ footer {
     .hero-content { grid-template-columns: 1fr; gap: 3rem; }
     .hero-title { font-size: 2.8rem; }
     .profile-card-3d { width: 300px; height: 300px; }
-    .modern-grid { grid-template-columns: repeat(2, 1fr); }
-    .modern-grid .featured { grid-column: span 2; grid-row: span 1; }
 }
 
 @media (max-width: 992px) {
@@ -1374,38 +1296,6 @@ footer {
     .metrics-grid { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
     .section-title { font-size: 1.8rem; }
     .metric-number { font-size: 2.5rem; }
-    
-    .nav-container {
-        flex-direction: column;
-        gap: 1rem;
-    }
-    
-    nav {
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-        width: 100%;
-    }
-    
-    nav a {
-        text-align: center;
-        padding: 0.5rem;
-    }
-    
-    .modern-grid {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-    }
-    
-    .modern-grid .featured {
-        grid-column: 1;
-        grid-row: auto;
-    }
-    
-    .modern-grid .skill-category:not(.featured) {
-        grid-column: 1;
-        grid-row: auto;
-    }
 }
 
 @media (max-width: 568px) {
@@ -1419,17 +1309,6 @@ footer {
     .metrics-grid { grid-template-columns: 1fr; }
     .project-buttons { flex-direction: column; }
     .project-btn { width: 100%; }
-    
-    nav a {
-        font-size: 1rem;
-        padding: 0.8rem;
-        background: rgba(255, 255, 255, 0.05);
-        border-radius: 8px;
-    }
-    
-    nav a:hover {
-        background: rgba(102, 126, 234, 0.2);
-    }
 }
 
 @media (max-width: 480px) {
@@ -1444,24 +1323,6 @@ footer {
     .profile-info .subtitle { font-size: 0.9rem; }
     .hero-cta { gap: 0.8rem; }
     .cta-button { padding: 0.6rem 1.2rem; font-size: 0.9rem; }
-    
-    .education-card {
-        grid-template-columns: 1fr;
-    }
-    
-    .card-image {
-        border-left: none;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-        min-height: 200px;
-    }
-    
-    .card-content {
-        padding: 1.5rem;
-    }
-    
-    .card-title {
-        font-size: 1.2rem;
-    }
 }
 
 @media (min-width: 1600px) {
