@@ -604,6 +604,14 @@ nav a:hover {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
+    align-items: stretch;
+}
+
+.skills-grid .skill-category {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 280px;
 }
 
 .modern-grid {
@@ -789,6 +797,14 @@ nav a:hover {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
+    align-items: stretch;
+}
+
+.experience-grid .experience-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 280px;
 }
 
 .experience-card {
@@ -899,6 +915,13 @@ nav a:hover {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
+    align-items: stretch;
+}
+
+.projects-grid .project-card {
+    display: flex;
+    flex-direction: column;
+    min-height: 400px;
 }
 
 .project-card {
