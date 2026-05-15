@@ -2,6 +2,12 @@
    PORTAFOLIO — DUVÁN ANDRÉS FLORIAN SALAZAR
    Dark-Tech Editorial · style.css
    ═══════════════════════════════════════════════ */
+.logo img{
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+  display: block;
+}
 
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Bebas+Neue&family=Outfit:wght@300;400;500;600&display=swap');
 
