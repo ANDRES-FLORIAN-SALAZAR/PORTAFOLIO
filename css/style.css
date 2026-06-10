@@ -1007,6 +1007,100 @@ nav a:hover {
 }
 
 /* ══════════════════════════════
+   EXPERIENCIA LABORAL (TIMELINE)
+══════════════════════════════ */
+.experience-timeline {
+  position: relative;
+  max-width: 820px;
+  margin: 2.5rem auto;
+  padding-left: 2rem;
+}
+
+.experience-timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 6px;
+  width: 1px;
+  background: linear-gradient(180deg, var(--neon), var(--neon2), transparent);
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 2px;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: -2rem;
+  top: 1.6rem;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 2px solid var(--neon);
+  box-shadow: 0 0 12px rgba(0, 245, 124, 0.5);
+  transform: translateX(-1px);
+  z-index: 2;
+}
+
+.timeline-card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  padding: 1.6rem 1.8rem;
+  position: relative;
+  transition: background 0.25s, border-color 0.25s;
+}
+
+.timeline-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 3px; height: 0;
+  background: linear-gradient(180deg, var(--neon), var(--neon2));
+  transition: height 0.35s ease;
+}
+.timeline-card:hover { background: var(--bg3); border-color: var(--neon-dim); }
+.timeline-card:hover::before { height: 100%; }
+
+.exp-period {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 0.63rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--neon);
+  border: 1px solid var(--neon-dim);
+  padding: 0.22rem 0.65rem;
+  margin-bottom: 0.8rem;
+}
+
+.exp-role {
+  font-family: var(--mono);
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+  color: var(--text);
+  text-transform: uppercase;
+  line-height: 1.4;
+}
+
+.exp-company {
+  font-size: 0.85rem;
+  color: var(--neon2);
+  font-weight: 500;
+  margin: 0.3rem 0 0.8rem;
+}
+
+.exp-description {
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+/* ══════════════════════════════
    FOOTER
 ══════════════════════════════ */
 footer {
