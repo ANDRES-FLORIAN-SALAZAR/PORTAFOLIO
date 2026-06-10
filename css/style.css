@@ -346,36 +346,34 @@ nav a:hover {
   overflow: hidden;
 }
 
-.cta-button.primary {
+/* PROYECTOS */
+.cta-projects {
   background: var(--neon);
   color: var(--bg);
-  box-shadow: none;
 }
-.cta-button.primary::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: white;
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.3s ease;
-}
-.cta-button.primary:hover { transform: none; box-shadow: none; }
-.cta-button.primary:hover::after { transform: scaleX(1); }
-.cta-button.primary i,
-.cta-button.primary span { position: relative; z-index: 1; }
 
-.cta-button.secondary {
-  background: transparent;
-  color: var(--text);
-  border: 1px solid var(--border);
-  backdrop-filter: none;
+.cta-projects:hover {
+  filter: brightness(1.1);
 }
-.cta-button.secondary:hover {
-  border-color: var(--neon);
-  color: var(--neon);
-  transform: none;
-  background: transparent;
+
+/* EXPERIENCIA */
+.cta-experience {
+  background: var(--neon2);
+  color: var(--bg);
+}
+
+.cta-experience:hover {
+  filter: brightness(1.1);
+}
+
+/* GITHUB */
+.cta-github {
+  background: var(--red);
+  color: white;
+}
+
+.cta-github:hover {
+  filter: brightness(1.1);
 }
 
 /* hero stats */
